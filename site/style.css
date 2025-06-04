@@ -1,0 +1,29 @@
+figure {
+    overflow-x: auto; /* Enables horizontal scrolling for wide tables */
+}
+
+#table-figure[aria-busy=true]::after {
+  display: none !important; /* Hide Pico's default spinner */
+}
+
+#sheet-label-text {
+  margin-right: 0.5rem; /* Add some space after "Sheet:" */
+}
+
+#filter-controls-grid {
+  display: grid; /* Ensure it's treated as a grid for direct children sizing */
+  grid-template-columns: auto 1fr; /* First column auto-sizes, second takes remaining space */
+  gap: var(--spacing, 1rem); /* Use Pico's spacing variable for the gap, or a default */
+  align-items: baseline; /* Vertically align items by their text baseline */
+}
+
+@media (max-width: 768px) {
+  #sheet-label-text,
+  #q-label-text {
+    display: none;
+  }
+}
+
+td.currency {
+  text-align: right;
+}

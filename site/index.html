@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>KRA CRSP — July 2025</title>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@latest/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+    <h1>KRA Current Retail Selling Prices (effective 1 Jul 2025)</h1>
+    <div class="grid" id="filter-controls-grid">
+      <label>
+        <span id="sheet-label-text">Sheet:</span>
+        <select id="sheet">
+          <option value="vehicle">Passenger vehicles</option>
+          <option value="motorcycles">Motor cycles</option>
+          <option value="tractors">Tractors & graders</option>
+        </select>
+      </label>
+      <label>
+        <span id="q-label-text">Filter:</span>
+        <input id="q" placeholder="Filter make / model / fuel…" autofocus>
+      </label>
+    </div>
+  </header>
+
+  <figure id="table-figure">
+    <table id="grid"><thead></thead><tbody></tbody></table>
+  </figure>
+  </main>
+  <script src="js/lib/pako.min.js"></script>
+  <script src="app.js"></script>
+</body>
